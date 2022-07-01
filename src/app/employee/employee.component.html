@@ -1,0 +1,20 @@
+<td *ngIf="employee.show ">{{ employee.name }}</td>
+<td *ngIf="employee.show">{{ employee.gender }}</td>
+<td *ngIf="employee.show">{{ employee.title }}</td>
+<td *ngIf="employee.show">{{ employee.tenure }}</td>
+<td *ngIf="employee.show">{{ employee.salary }}</td>
+<td *ngIf="employee.show"></td>
+
+<td *ngIf="employee.show">
+    <button (click)="
+        this.helloworld.updateEmployee(this.helloworld.name, 
+                                        this.helloworld.gender, 
+                                        this.helloworld.title, 
+                                        this.helloworld.tenure, 
+                                        this.helloworld.salary, 
+                                        this.helloworld.show,
+                                        this.index
+                                        )">Update Employee
+    </button>
+    <button (click)="this.helloworld.deleteEmployee(this.index)">Delete Employee</button>
+</td>

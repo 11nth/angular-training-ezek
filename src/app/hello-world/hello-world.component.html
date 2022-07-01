@@ -1,0 +1,46 @@
+<!-- <p [ngStyle]="{'color':color}">NAKAKAPAGPABAGABAG works!</p>
+
+<p [ngClass]="class_chuchu">{{isBig}}</p>
+<button (mouseenter)="switchSize('size-10')">yeet</button>
+
+<p *ngIf="isDisplayed">I'm Displayed</p>
+<br *ngIf="!isDisplayed" />
+<br *ngIf="!isDisplayed" />
+<br *ngIf="!isDisplayed" />
+<br *ngIf="!isDisplayed" />
+<button (click)="switchDisplay()">{{isDisplayed ? 'Hide Me' : 'Show Me'}}</button>
+
+<br/><br/>
+<input [(ngModel)]="message">
+<p class="hello-world">{{message}}</p>
+
+<br/><br/>
+<input [(ngModel)]="alertMessage">
+<button (click)="displayAlert()">show alert message</button>
+
+<br/><br/>
+<input [(ngModel)]="class_chuchu"> -->
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Title</th>
+        <th>Tenure</th>
+        <th>Salary</th>
+        <th>Show</th>
+        <th>Lenght: {{len}}</th>
+    </tr>
+    <tr>
+        <td>Name: <input [(ngModel)]="name"></td>
+        <td>Gender: <input [(ngModel)]="gender"></td>
+        <td>Title: <input [(ngModel)]="title"></td>
+        <td>Tenure: <input [(ngModel)]="tenure"></td>
+        <td>Salary: <input [(ngModel)]="salary"></td>
+        <td>Show: <input 
+                    type="checkbox" 
+                    [(ngModel)]="show"></td>
+        <td><button (click)="addEmployee(name, gender, title, tenure, salary, show)">Add New Employee</button></td>
+    </tr>
+    <tr *ngFor="let employee of employees, let i = index;" app-employee [employee]="employee" [index]="i"></tr>
+</table>
